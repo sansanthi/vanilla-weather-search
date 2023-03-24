@@ -33,13 +33,18 @@ function displayTemperature(response) {
   let temperature = document.querySelector("#temperature");
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
-
+  let icon = document.querySelector(".weather-icon");
   city.innerHTML = response.data.name;
   description.innerHTML = response.data.weather[0].main;
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   temperature.innerHTML = Math.round(response.data.main.temp);
   humidity.innerHTML = response.data.main.humidity;
   wind.innerHTML = response.data.wind.speed;
+  icon.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  icon.setAttribute("alt", response.data.weather[0].main);
 }
 console.log(apiURL);
 axios.get(apiURL).then(displayTemperature);
