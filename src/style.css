@@ -49,3 +49,17 @@ li {
     position: relative;
     top: -34px;
 }
+
+.units a {
+    text-decoration: none;
+}
+
+.units .active {
+    color: rgb(33, 33, 33);
+    cursor: default;
+    text-decoration: none;
+}
+
+.units .active:hover {
+    cursor: pointer;
+}
