@@ -23,7 +23,6 @@ function formatDate(timestamp) {
 }
 
 let apiKey = "6abba6e892082f6e99ff3292ea97c423";
-let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`;
 
 function displayTemperature(response) {
   console.log(response);
@@ -46,5 +45,19 @@ function displayTemperature(response) {
   );
   icon.setAttribute("alt", response.data.weather[0].main);
 }
-console.log(apiURL);
-axios.get(apiURL).then(displayTemperature);
+
+function searchCity(city) {
+  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  console.log(apiURL);
+  axios.get(apiURL).then(displayTemperature);
+}
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#search-input");
+  searchCity(cityInput.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+searchCity("New York");
