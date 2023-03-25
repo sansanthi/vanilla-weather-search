@@ -7,12 +7,17 @@ h1 {
     font-size: 24px;
     font-weight: 100;
     line-height: 28px;
-    margin-bottom: 0;
+    margin-bottom: 5px;
 }
 
 .weather-app-wrapper {
     max-width: 600px;
     margin: 0 auto;
+}
+
+.weather-app {
+    margin-top: 40px;
+    background-color: #CEE6DF;
 }
 
 ul {

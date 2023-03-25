@@ -17,7 +17,7 @@
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
-        <div class="weather-app mt-4 p-3 border rounded">
+        <div class="weather-app p-3 border rounded">
           <form id="search-form">
             <div class="row mb-3">
               <div class="col-9">
@@ -38,10 +38,10 @@
             </div>
           </form>
           <div class="row mb-3">
-            <h1 id="city">New York</h1>
+            <h1 id="city"></h1>
             <ul>
-              <li id="date">Friday 2:45</li>
-              <li class="description">Clear</li>
+              <li class="mb-1">Last updated: <span id="date"></span></li>
+              <li class="description"></li>
             </ul>
           </div>
           <div class="row">
@@ -53,7 +53,7 @@
                   class="weather-icon"
                 />
                 <div>
-                  <strong id="temperature">20</strong>
+                  <strong id="temperature"></strong>
                   <span class="units"
                     ><a href="#" id="celsius-link" class="active"> ˚C</a> |
                     <a href="#" id="farhrenheit-link"> ˚F</a></span
@@ -67,7 +67,9 @@
             </div>
           </div>
         </div>
-        <small><a href="#">Open-sourced code</a> by San San Thi</small>
+        <small class="d-block mt-2"
+          ><a href="#">Open-sourced code</a> by San San Thi</small
+        >
       </div>
     </div>
   </body>
